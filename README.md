@@ -1,12 +1,13 @@
-# buffcount.nvim
+# buffcounts.nvim
 
 ![screenshot](./doc/screenshot.png)
 
-this plugin aim to enhance clarity about every opened buffers, provide clear ranking to the most opened buffer.
+this plugin aims to improve clarity for each opened buffer, providing a clear ranking for the most opened buffers.
 
-- clarity is priority
-- memorize filepath better
-- easy to re-open with tools like `telescope.nvim`
+- enhance workflow clarity
+- easy to re-open buffer with tools like `telescope.nvim`
+- respect long directory path or filename (one level parent dir)
+- respect main content width view (not hiding the actual viewed content below)
 
 ## installation
 
@@ -35,3 +36,5 @@ return {
 ```
 
 ## enjoy
+
+// 2025 - @naranyala
