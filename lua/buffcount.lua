@@ -114,7 +114,7 @@ local function get_buffer_list()
 	end)
 
 	-- Update current_width, including space for title
-	local title_length = #"Buffer Counts" + 2 -- +2 for padding
+	local title_length = #"Buffer Counts" + 3 -- +2 for padding
 	state.current_width =
 		math.max(config.min_width, math.min(config.max_width, math.max(max_line_length, title_length) + 2))
 
