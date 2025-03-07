@@ -20,14 +20,14 @@ return {
   {
     "naranyala/buffcounts.nvim",
     config = function()
-      require("buffcount").setup {
+      require("buffcounts").setup {
         min_width = 25,
         max_width = 80,
       }
 
       -- reset every open project and show the sidebar/panel
-      vim.cmd [[BuffCountReset]]
-      vim.cmd [[BuffCountToggle]]
+      vim.cmd [[BuffCountsReset]]
+      vim.cmd [[BuffCountsToggle]]
     end
   }
   -- ...
@@ -41,6 +41,9 @@ there is three main command:
 - BuffCountsRefresh: reload the ui
 - BuffCountsReset: reset the rank
 
-## enjoy
+## todos
 
-// 2025 - @naranyala
+- [] disable sorting, just list of buffer history
+- [] navigate buffer history with index
+
+> 2025 - @naranyala

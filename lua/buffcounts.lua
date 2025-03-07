@@ -3,7 +3,7 @@ local api = vim.api
 
 -- Simplified configuration
 local config = {
-	width = 30, -- Default width (used as initial value)
+	width = 30,    -- Default width (used as initial value)
 	min_width = 20, -- Minimum width
 	max_width = 60, -- Maximum width
 	selector_char = "▶",
@@ -116,7 +116,7 @@ local function get_buffer_list()
 	-- Update current_width, including space for title
 	local title_length = #"Buffer Counts" + 3 -- +2 for padding
 	state.current_width =
-		math.max(config.min_width, math.min(config.max_width, math.max(max_line_length, title_length) + 2))
+			math.max(config.min_width, math.min(config.max_width, math.max(max_line_length, title_length) + 2))
 
 	return valid_buffers
 end
@@ -167,7 +167,7 @@ local function render_content()
 	-- Position cursor on current buffer, accounting for title and separator
 	for i, buf in ipairs(buffers) do
 		if buf.id == current_buf then
-			local line_num = i + 2 -- +2 for title and separator
+			local line_num = i + 2          -- +2 for title and separator
 			for j = 1, i - 1 do
 				local line_length = #lines[j + 2] -- Offset by title and separator
 				if line_length > state.current_width then
@@ -398,7 +398,7 @@ function Sidebar.setup(opts)
 	api.nvim_create_user_command("BuffCountsRefresh", Sidebar.render, {})
 	api.nvim_create_user_command("BuffCountsReset", Sidebar.clear_counts, {})
 
-	api.nvim_set_keymap("n", "<leader>b", ":BuffCountToggle<CR>", { noremap = true, silent = true })
+	api.nvim_set_keymap("n", "<leader>b", ":BuffCountsToggle<CR>", { noremap = true, silent = true })
 end
 
 -- Toggle sidebar
