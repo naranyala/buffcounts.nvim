@@ -1,6 +1,8 @@
 # buffcount.nvim
 
-this plugin aim to enhance clarity about every opened buffers, provide clear ranking of most opened buffer.
+![screenshot](./doc/screenshot.png)
+
+this plugin aim to enhance clarity about every opened buffers, provide clear ranking to the most opened buffer.
 
 - clarity is priority
 - memorize filepath better
@@ -15,7 +17,7 @@ this plugin aim to enhance clarity about every opened buffers, provide clear ran
 return {
   -- ...
   {
-    "naranyala/buffcount.nvim",
+    "naranyala/buffcounts.nvim",
     config = function()
       require("buffcount").setup {
         min_width = 25,
