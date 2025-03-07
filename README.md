@@ -35,6 +35,12 @@ return {
 
 ```
 
+there is three main command:
+
+- BuffCountsToggle: toggle show/hide sidebar or panel
+- BuffCountsRefresh: reload the ui
+- BuffCountsReset: reset the rank
+
 ## enjoy
 
 // 2025 - @naranyala

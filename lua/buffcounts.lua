@@ -394,9 +394,9 @@ function Sidebar.setup(opts)
 
 	initialize()
 
-	api.nvim_create_user_command("BuffCountToggle", Sidebar.toggle, {})
-	api.nvim_create_user_command("BuffCountRefresh", Sidebar.render, {})
-	api.nvim_create_user_command("BuffCountReset", Sidebar.clear_counts, {})
+	api.nvim_create_user_command("BuffCountsToggle", Sidebar.toggle, {})
+	api.nvim_create_user_command("BuffCountsRefresh", Sidebar.render, {})
+	api.nvim_create_user_command("BuffCountsReset", Sidebar.clear_counts, {})
 
 	api.nvim_set_keymap("n", "<leader>b", ":BuffCountToggle<CR>", { noremap = true, silent = true })
 end
